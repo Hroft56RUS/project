@@ -1,34 +1,25 @@
 'use strict';
 
-a = 5;
-console.log(a);
+let money = prompt('Ваш бюджет а месяц?',""),
+    time = prompt('Введите дату в формате YYYY-MM-DD',"");
 
-var number = 5;
-var string = 'Hello!';
-var sym = Symbol();
-var boolean = true;
-null;
-undefined;
-var obj = {};
+let appData = { 
+        budget: money, 
+        timeData: time, 
+        expenses: {},
+        optionalExpenses: {},
+        income: [],
+        savings: false
+    };
 
-console.log(4/0);
-console.log('fgdfgdf'*9);
+let stateRash1 = prompt("Введите обязательную статью расходов в этом месяце",""),
+    stateAll1 = prompt("Во сколько обойдется?",""),
+    stateRash2 = prompt("Введите обязательную статью расходов в этом месяце",""),
+    stateAll2 = prompt("Во сколько обойдется?","");
 
-let something;
-console.log(something);
+appData.expenses.stateRash1 = stateAll1;
+appData.expenses.stateRash2 = stateAll2;
 
-let persone = {
-    name: "John",
-    age: 25,
-    isMarried: false
-}
+alert(appData.budget/30);
 
-console.log(persone.age);
 
-// alert('asdadasd');
-
-// let answer = confirm('AAAAAAA');
-// console.log(answer)
-
-let answer = prompt('SDSDSD?','Yes');
-console.log(typeof(answer));
