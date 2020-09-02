@@ -12,13 +12,48 @@ let appData = {
         savings: false
     };
 
-let stateRash1 = prompt("Введите обязательную статью расходов в этом месяце",""),
-    stateAll1 = prompt("Во сколько обойдется?",""),
-    stateRash2 = prompt("Введите обязательную статью расходов в этом месяце",""),
-    stateAll2 = prompt("Во сколько обойдется?","");
+for (let i = 0; i < 2; i++) {
+    let a = prompt("Введите обязательную статью расходов в этом месяце",""),
+        b = prompt("Во сколько обойдется?","");
+    
+    if ( (typeof(a))==='sring' && (typeof(a) != null) && (typeof(b) != null) && (a != "") && (b != "") 
+         && (a.length < 50) ) {
+        console.log("done");
+        appData.expenses[a] = b;
+    } else {
+        continue;
+    }
+}
 
-appData.expenses.stateRash1 = stateAll1;
-appData.expenses.stateRash2 = stateAll2;
+//let i = 0;
+// while (i < 2) {
+//     let a = prompt("Введите обязательную статью расходов в этом месяце",""),
+//         b = prompt("Во сколько обойдется?","");
+    
+//     if ( (typeof(a))==='sring' && (typeof(a) != null) && (typeof(b) != null) && (a != "") && (b != "") 
+//          && (a.length < 50) ) {
+//         console.log("done");
+//         appData.expenses[a] = b;
+//     } else {
+//         continue;
+//     }
+//     i++;
+// }
+
+// do {
+//     let a = prompt("Введите обязательную статью расходов в этом месяце",""),
+//         b = prompt("Во сколько обойдется?","");
+        
+//     if ( (typeof(a))==='sring' && (typeof(a) != null) && (typeof(b) != null) && (a != "") && (b != "") 
+//             && (a.length < 50) ) {
+//         console.log("done");
+//         appData.expenses[a] = b;
+//     } else {
+//         continue;
+//     }
+//     i++;
+// } while (i < 2);
+
 
 alert(appData.budget/30);
 
