@@ -1,6 +1,6 @@
-let timerId = setTimeout(sayHello, 3000);
-clearTimeout(timerId);
+let age = document.getElementById('age');
 
-function sayHello(){
-    alert('dfsdfsdf');
+function showUser(surname, name) {
+    alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
 }
+showUser.apply(age,['Ivanov','Ivan']); 
